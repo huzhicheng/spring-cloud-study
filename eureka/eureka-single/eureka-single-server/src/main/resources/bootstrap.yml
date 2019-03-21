@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: kite-eureka-center
+  security:
+      user:
+        name: test  # 用户名
+        password: 123456   # 密码
+  cloud:
+    inetutils: ## 网卡设置
+      ignoredInterfaces:  ## 忽略的网卡
+        - docker0
+        - veth.*
+        - VM.*
+      preferredNetworks:  ## 优先的网段
+        - 192.168

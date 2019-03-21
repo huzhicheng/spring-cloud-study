@@ -1,0 +1,84 @@
+spring:
+  profiles:
+    active: stream-rabbit-customer-group1
+
+---
+spring:
+  profiles: stream-rabbit-customer-group1
+  cloud:
+    stream:
+      bindings:
+#        input:
+#          destination: default.messages
+#          binder: local_rabbit
+#        output:
+#          destination: default.messages
+#          binder: local_rabbit
+        log_input:
+          destination: kite.log.messages
+          binder: local_rabbit
+          group: logConsumer-group1
+        log_output:
+          destination: kite.log.messages
+          binder: local_rabbit
+          group: logConsumer-group1
+        log_format_input:
+          destination: kite.log.format.messages
+          binder: local_rabbit
+          group: logFormat-group1
+        log_format_output:
+          destination: kite.log.format.messages
+          binder: local_rabbit
+          group: logFormat-group1
+      binders:
+        local_rabbit:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                host: localhost
+                port: 32775
+                username: guest
+                password: guest
+server:
+  port: 8201
+
+---
+spring:
+  profiles: stream-rabbit-customer-group2
+  cloud:
+    stream:
+      bindings:
+#        input:
+#          destination: default.messages
+#          binder: local_rabbit
+#        output:
+#          destination: default.messages
+#          binder: local_rabbit
+        log_input:
+          destination: kite.log.messages
+          binder: local_rabbit
+          group: logConsumer-group2
+        log_output:
+          destination: kite.log.messages
+          binder: local_rabbit
+        log_format_input:
+          destination: kite.log.format.messages
+          binder: local_rabbit
+          group: logFormat-group1
+        log_format_output:
+          destination: kite.log.format.messages
+          binder: local_rabbit
+          group: logFormat-group1
+      binders:
+        local_rabbit:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                host: localhost
+                port: 32775
+                username: guest
+                password: guest
+server:
+  port: 8203

@@ -1,0 +1,16 @@
+server:
+  port: 3002
+eureka:
+  client:
+    serviceUrl:
+      register-with-eureka: true
+      fetch-registry: true
+      defaultZone: http://test:123456@localhost:3000/eureka/
+  instance:
+    preferIpAddress: true
+spring:
+  application:
+    name: single-customer
+feign:
+  okhttp:
+    enabled: true

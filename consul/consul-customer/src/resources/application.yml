@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: consul-customer
+server:
+  port: 5001
+
+endpoints:
+  health:
+    sensitive: false
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+
+management:
+  security:
+    enabled: false

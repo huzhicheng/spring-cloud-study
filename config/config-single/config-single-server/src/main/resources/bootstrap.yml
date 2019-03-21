@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: config-single-server
+  cloud:
+     config:
+        server:
+          git:
+            uri: https://github.com/huzhicheng/config-only-a-demo
+            username: usrname
+            password: password
+            default-label: master
+            search-paths: config

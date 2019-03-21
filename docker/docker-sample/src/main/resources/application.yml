@@ -1,0 +1,5 @@
+server:
+  port: 7000
+spring:
+  application:
+    name: spring-boot-docker-sample

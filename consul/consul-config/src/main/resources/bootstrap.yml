@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    consul:
+      config:
+        enabled: true    # 启用配置中心
+        format: yaml     # 指定配置格式为 yaml
+        data-key: mysql_config # 也就是 consul 中 key/value 中的 key
+        prefix: config         # 可以理解为配置文件所在的最外层目录
+        defaultContext: consul-config  # 可以理解为 mysql_config 的上级目录
+      discovery:
+        register: false

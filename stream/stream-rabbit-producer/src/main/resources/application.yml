@@ -1,0 +1,21 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        log_output:
+          destination: kite.log.messages
+          binder: local_rabbit
+          group: logConsumer-group1
+      binders:
+        local_rabbit:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                host: localhost
+                port: 32775
+                username: guest
+                password: guest
+server:
+  port: 8202
+

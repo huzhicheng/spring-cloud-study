@@ -1,0 +1,32 @@
+spring:
+  profiles:
+    active: consul-provider1
+endpoints:
+  health:
+    sensitive: false
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+
+management:
+  security:
+    enabled: false
+
+---
+spring:
+  profiles: consul-provider1
+  application:
+    name: consul-provider1
+
+server:
+  port: 5000
+
+---
+spring:
+  profiles: consul-provider2
+  application:
+    name: consul-provider2
+
+server:
+  port: 5002

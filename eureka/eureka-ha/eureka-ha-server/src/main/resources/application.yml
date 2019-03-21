@@ -1,0 +1,32 @@
+spring:
+  profiles: eureka-center1
+server:
+  port: 1989
+eureka:
+  instance:
+    hostname: ha-eureak-center1
+    appname: 注册中心
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:1988/eureka
+
+
+---
+spring:
+  profiles: eureka-center2
+server:
+  port: 1988
+eureka:
+  instance:
+    hostname: ha-eureak-center2
+    appname: 注册中心
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:1989/eureka
+
+
+

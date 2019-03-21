@@ -1,0 +1,8 @@
+server:
+  port: 1992
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1989/eureka,http://localhost:1988/eureka
+  instance:
+    preferIpAddress: true

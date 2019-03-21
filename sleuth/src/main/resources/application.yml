@@ -1,0 +1,5 @@
+server:
+  port: 3101
+spring:
+  application:
+    name: sleuth-application

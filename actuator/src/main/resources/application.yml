@@ -1,0 +1,19 @@
+server:
+  port: 3201
+management:
+  endpoint:
+    shutdown:
+      enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    jmx:
+      exposure:
+        include: "*"
+  server:
+    port: 3208
+
+spring:
+  application:
+    name: actuator-application

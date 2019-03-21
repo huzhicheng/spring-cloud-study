@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: consul-config
+server:
+  port: 5008
+
+
+management:
+  endpoints:
+    health:
+      sensitive: false
+    restart:
+      enabled: true
+    shutdown:
+      enabled: true
+

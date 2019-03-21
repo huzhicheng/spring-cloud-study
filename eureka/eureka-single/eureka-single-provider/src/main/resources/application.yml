@@ -1,0 +1,23 @@
+server:
+  port: 3001
+
+#eureka:
+#  instance:
+#    preferIpAddress: true
+#  client:
+#    serviceUrl:
+#      defaultZone: http://test:123456@localhost:3000/eureka
+
+eureka:
+  instance:
+    statusPageUrlPath: /actuator/info
+    healthCheckUrlPath: /actuator/health
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://test:123456@localhost:3000/eureka/
+spring:
+  application:
+    name: single-provider

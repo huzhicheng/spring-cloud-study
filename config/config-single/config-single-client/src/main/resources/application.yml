@@ -1,0 +1,12 @@
+server:
+  port: 3302
+management:
+  endpoint:
+    shutdown:
+      enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
