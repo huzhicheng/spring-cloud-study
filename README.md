@@ -18,4 +18,4 @@
 
 
 ## 微信公众号
-![古时的风筝](http://hexo.moonkite.cn/WeChat/wechat-qr.png)
+![古时的风筝](http://hexo.moonkite.cn/code_small.png)
