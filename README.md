@@ -11,7 +11,7 @@
 
 #### 本系列主要包括如下功能的介绍和简单脚手架
 > 随着我的 Spring Cloud 系列文章的更新，下面的目录也会更新，文章会首发在微信公众号：「古时的风筝」,没关注的同学可以关注一下呦！
-
+[Spring Cloud 各功能模块一览](https://mp.weixin.qq.com/s/f0iMAPNktJPLwmV9g4vdyw)
 [Spring Cloud 系列之 Eureka 实现单点服务注册发现](https://github.com/huzhicheng/spring-cloud-study/tree/master/eureka/eureka-single)
 
 
