@@ -24,6 +24,7 @@
         <module>actuator</module>
         <module>admin</module>
         <module>config</module>
+        <module>security</module>
     </modules>
 
     <dependencies>
