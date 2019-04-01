@@ -18,6 +18,8 @@
 [Spring Cloud 系列之 Eureka 实现单点服务注册发现](https://mp.weixin.qq.com/s/kGrWQP_n_RCYTTaHbWQ3xQ)
 ：[对应源码](https://github.com/huzhicheng/spring-cloud-study/tree/master/eureka/eureka-single)
 
+[为 Eureka 服务注册中心实现安全控制](https://mp.weixin.qq.com/s/xVa6Ro4ORsCRJ9gsAOHAeg)
+：[对应源码](https://github.com/huzhicheng/spring-cloud-study/tree/master/eureka/eureka-single)
 
 
 如果觉得有用，请给个 star,还可以关注我的公众号。
