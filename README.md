@@ -21,6 +21,10 @@
 [为 Eureka 服务注册中心实现安全控制](https://mp.weixin.qq.com/s/xVa6Ro4ORsCRJ9gsAOHAeg)
 ：[对应源码](https://github.com/huzhicheng/spring-cloud-study/tree/master/eureka/eureka-single)
 
+[Spring Cloud Eureka 实现高可用服务发现注册中心](https://mp.weixin.qq.com/s/d_GfdHxxiwdnYa2_mcv8TA)
+：[对应源码](https://github.com/huzhicheng/spring-cloud-study/tree/master/eureka/eureka-ha)
+
+
 
 如果觉得有用，请给个 star,还可以关注我的公众号。
 ## 微信公众号
