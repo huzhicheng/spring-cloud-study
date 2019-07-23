@@ -1,0 +1,43 @@
+eureka:
+  client:
+    serviceUrl:
+      register-with-eureka: true
+      fetch-registry: true
+      defaultZone: http://test:123456@localhost:3000/eureka/
+  instance:
+    preferIpAddress: true
+
+
+spring:
+  profiles:
+    active: dev
+
+---
+spring:
+  profiles: prod
+  application:
+    name: config-eureka-client
+  cloud:
+     config:
+       label: master
+       profile: prod
+       discovery:
+         enabled: true
+         service-id: config-eureka-server
+
+
+---
+spring:
+  profiles: dev
+  application:
+    name: config-eureka-client
+  cloud:
+     config:
+       label: master
+       profile: dev
+       discovery:
+          enabled: true
+          service-id: config-eureka-server
+
+
+

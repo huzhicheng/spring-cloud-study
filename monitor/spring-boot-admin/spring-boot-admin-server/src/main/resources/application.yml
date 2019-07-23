@@ -1,0 +1,7 @@
+server:
+  port: 5001
+spring:
+  application:
+    name: spring-boot-admin-server
+
+

@@ -9,4 +9,12 @@ management:
       exposure:
         include: "*"
 
+data:
+  env: NaN
+  user:
+    username: NaN
+    password: NaN
+
+
+
 

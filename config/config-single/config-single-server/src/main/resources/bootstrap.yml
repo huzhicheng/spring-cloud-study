@@ -6,7 +6,7 @@ spring:
         server:
           git:
             uri: https://github.com/huzhicheng/config-only-a-demo
-            username: usrname
+            username: username
             password: password
             default-label: master
             search-paths: config

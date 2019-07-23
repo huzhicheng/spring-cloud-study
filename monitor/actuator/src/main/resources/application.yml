@@ -1,0 +1,32 @@
+server:
+  port: 3201
+management:
+  endpoint:
+    shutdown:
+      enabled: false
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    jmx:
+      exposure:
+        include: "*"
+  server:
+    port: 3208
+
+spring:
+  application:
+    name: actuator-application
+  redis:
+    database: 0
+    host: localhost
+    port: 32768
+    password: 1qaz@WSX
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+    timeout: 100ms

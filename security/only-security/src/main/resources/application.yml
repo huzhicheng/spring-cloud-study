@@ -1,10 +1,10 @@
 server:
   port: 3601
-#spring:
-#  security:
-#    user:
-#      name: admin
-#      password: admin
+spring:
+  security:
+    user:
+      name: admin
+      password: admin
 
 management:
   endpoint:

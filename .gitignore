@@ -1,7 +1,35 @@
-_Store
-*/.DS_Store
-*.swp
-.idea
-*.iml
+.gradle
+.DS_Store
+.gitignore
+/build/
+!gradle/wrapper/gradle-wrapper.jar
 
-target
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.log
+*.iws
+*.iml
+*.ipr
+/out/
+
+### NetBeans ###
+/nbproject/private/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+/target/
+/bin/
+
+**/target/
+**/.DS_Store

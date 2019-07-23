@@ -1,4 +1,4 @@
-package kite.springcloud.only.security.config.one;
+package kite.springcloud.only.security.config.two;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -23,7 +23,7 @@ public class KiteUserDetailsService implements UserDetailsService {
 
 
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+    public KiteUserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         log.info("usernameis:" + username);
         // 查询数据库操作
         if(!username.equals("admin")){

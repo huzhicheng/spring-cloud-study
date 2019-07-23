@@ -1,4 +1,4 @@
-package kite.springcloud.only.security.config.one;
+package kite.springcloud.only.security.config.two;
 
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;

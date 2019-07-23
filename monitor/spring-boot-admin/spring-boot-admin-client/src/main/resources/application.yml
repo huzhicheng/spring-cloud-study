@@ -1,0 +1,23 @@
+server:
+  port: 5002
+spring:
+  application:
+    name: spring-boot-admin-client
+  boot:
+    admin:
+      client:
+        url: http://localhost:5001
+
+management:
+  endpoint:
+    shutdown:
+      enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    jmx:
+      exposure:
+        include: "*"
+
+
