@@ -21,8 +21,6 @@
         <module>common</module>
         <module>docker</module>
         <module>sleuth</module>
-        <module>actuator</module>
-        <module>admin</module>
         <module>config</module>
         <module>security</module>
         <module>boot</module>
