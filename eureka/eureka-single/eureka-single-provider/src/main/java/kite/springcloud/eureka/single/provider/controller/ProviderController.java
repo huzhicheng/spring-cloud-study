@@ -21,6 +21,12 @@ public class ProviderController {
     @Autowired
     private DiscoveryClient discoveryClient;
 
+    @RequestMapping(value = "/timeout")
+    public String timeOut() throws Exception{
+        Thread.sleep(7000);
+        return "wait 7 seconds timeout";
+    }
+
     @RequestMapping(value = "/hello")
     public String hello(){
         List<String> services = discoveryClient.getServices();

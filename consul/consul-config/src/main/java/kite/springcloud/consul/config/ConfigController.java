@@ -22,13 +22,6 @@ public class ConfigController {
     @Autowired
     private MySqlComplexConfig mySqlComplexConfig;
 
-    @Value("${host}")
-    private String host;
-
-    @GetMapping(value = "host")
-    public String getHost(){
-        return host;
-    }
 
     @GetMapping(value = "mysqlhost")
     public String getMysqlHost(){

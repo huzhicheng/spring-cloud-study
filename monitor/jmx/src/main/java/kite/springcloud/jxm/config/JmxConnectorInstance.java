@@ -1,5 +1,6 @@
 package kite.springcloud.jxm.config;
 
+import lombok.extern.slf4j.Slf4j;
 import sun.misc.VMSupport;
 
 import javax.management.remote.JMXConnector;
@@ -12,6 +13,7 @@ import javax.management.remote.JMXServiceURL;
  * @author fengzheng
  * @date 2019/7/16
  */
+@Slf4j
 public enum JmxConnectorInstance {
 
     INSTANCE;
@@ -33,20 +35,22 @@ public enum JmxConnectorInstance {
 
     private void buildJmxConnector(){
         String addr = (String) VMSupport.getAgentProperties().get("com.sun.management.jmxremote.localConnectorAddress");
+
         if (addr == null) {
             try {
                 sun.management.Agent.premain("");
             } catch (Exception e) {
-
+                e.printStackTrace();
             }
         }
         addr = (String) VMSupport.getAgentProperties().get("com.sun.management.jmxremote.localConnectorAddress");
+
         try {
             JMXServiceURL jmxServiceURL = new JMXServiceURL(addr);
             JMXConnector jmxConnector = JMXConnectorFactory.connect(jmxServiceURL, null);
             JmxConnectorInstance.jmxConnector = jmxConnector;
         } catch (Exception e) {
-
+            e.printStackTrace();
         }
     }
 

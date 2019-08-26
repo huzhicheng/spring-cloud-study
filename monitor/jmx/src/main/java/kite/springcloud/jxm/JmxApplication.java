@@ -11,8 +11,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class JmxApplication {
 
-    public static final String JMXCONNECTOR = "JMXCONNECTOR";
-
     public static void main(String[] args) {
         SpringApplication.run(JmxApplication.class, args);
     }

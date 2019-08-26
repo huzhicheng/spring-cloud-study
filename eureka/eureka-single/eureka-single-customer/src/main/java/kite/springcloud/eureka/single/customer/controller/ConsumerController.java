@@ -46,4 +46,9 @@ public class ConsumerController {
         return "hello eureka!";
     }
 
+
+    @GetMapping(value = "timeout")
+    public String timeout(){
+        return helloService.timeOut();
+    }
 }

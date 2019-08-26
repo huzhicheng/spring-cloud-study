@@ -17,4 +17,7 @@ public interface IHelloService {
 
     @RequestMapping(value = "nice")
     String nice();
+
+    @RequestMapping(value = "/timeout")
+    String timeOut();
 }
