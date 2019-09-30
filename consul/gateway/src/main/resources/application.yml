@@ -1,0 +1,46 @@
+server:
+  port: 10000
+spring:
+  application:
+    name: gateway
+  redis:
+    database: 1
+    host: localhost
+    port: 32768
+    password: 1qaz@WSX
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+    timeout: 100ms
+  cloud:
+#    gateway:
+#      discovery:
+#        locator:
+#          enabled: true
+#          lower-case-service-id: false
+#      routes:
+#      - id: userServiceRouter
+#        uri: lb://consul-user
+#        predicates:
+#        - Path=/user-service/**
+#      - id: orderServiceRouter
+#        uri: lb://consul-order
+#        predicates:
+#        - Path=/order-service/**
+#        filters:
+#        - StripPrefix=1
+    consul:
+      host: localhost #注册gateway网关到consul
+      port: 8500
+      discovery:
+        service-name: service-gateway
+
+hystrix:
+  command:
+    second2Command:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 1000

@@ -48,4 +48,5 @@ public class GitAutoRefreshConfig {
     private String env;
 
     private UserInfo user;
+
 }

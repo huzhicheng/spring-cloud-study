@@ -1,8 +1,0 @@
-server:
-  port: 6002
-  servlet:
-    context-path: /jmx
-spring:
-  application:
-    name: jmx
-

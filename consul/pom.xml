@@ -16,6 +16,9 @@
         <module>consul-provider</module>
         <module>consul-customer</module>
         <module>consul-config</module>
+        <module>gateway</module>
+        <module>consul-user</module>
+        <module>consul-order</module>
     </modules>
 
     <dependencies>

@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: consul-user
+  cloud:
+    consul:
+      discovery:
+        service-name: consul-user
+      host: localhost
+      port: 8500
+
+server:
+  port: 5005
+  servlet:
+    context-path: /user-service
+
+management:
+  endpoint:
+    health:
+      enabled: true
+  server:
+    port: 15005
+
+

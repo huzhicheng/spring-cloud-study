@@ -2,6 +2,7 @@ package kite.springcloud.consul.provider.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,13 +25,17 @@ public class HelloController {
     @Autowired
     private DiscoveryClient discoveryClient;
 
+    @Value("${spring.application.name}")
+    private String applicationName;
+
     @GetMapping(value = "test")
     public String test(){
+
         List<String> services = discoveryClient.getServices();
         for(String s : services){
             log.info(s);
         }
-        return "hello spring cloud!";
+        return "hello spring cloud!" + applicationName;
     }
 
     @GetMapping(value = "nice")

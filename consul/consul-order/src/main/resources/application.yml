@@ -1,0 +1,44 @@
+spring:
+  profiles:
+    active: consul-order
+  cloud:
+    consul:
+      discovery:
+        service-name: consul-order
+      host: localhost
+      port: 8500
+
+
+management:
+  endpoint:
+    health:
+      enabled: true
+
+
+---
+spring:
+  profiles: consul-order
+  application:
+    name: consul-order
+server:
+  port: 5006
+
+
+
+---
+spring:
+  profiles: consul-order-other
+  application:
+    name: consul-order-other
+server:
+  port: 5007
+
+
+---
+spring:
+  profiles: consul-order-next
+  application:
+    name: consul-order-next
+server:
+  port: 5008
+
