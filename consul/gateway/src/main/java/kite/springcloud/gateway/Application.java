@@ -17,6 +17,8 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.server.SecurityWebFilterChain;
 
+import java.time.ZonedDateTime;
+
 /**
  * @author fengzheng
  * @date 2019-08-01
@@ -30,7 +32,7 @@ public class Application {
     }
 
     @Bean
-    public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
+    public RouteLocator kiteRouteLocator(RouteLocatorBuilder builder) {
         return builder.routes()
                 .route("userRouter", r -> r.path("/user-service/**")
                         .filters(f ->
@@ -39,7 +41,8 @@ public class Application {
                 )
                 .route("orderRouter", r -> r.path("/order-service/**")
                         .filters(f -> f.stripPrefix(1)
-                        ).uri("lb://consul-order")
+                        )
+                        .uri("lb://consul-order")
                 )
                 .route("hystrixRouter", r -> r.path("/hystrix/**")
                         .filters(f -> f.stripPrefix(1)

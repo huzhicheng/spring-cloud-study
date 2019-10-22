@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: client-user
+  redis:
+    database: 2
+    host: localhost
+    port: 32768
+    password: 1qaz@WSX
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+    timeout: 100ms
+server:
+  port: 6101
+  servlet:
+    context-path: /client-user
+
+security:
+  oauth2:
+    client:
+      client-id: user-client
+      client-secret: user-secret-8888
+      user-authorization-uri: http://localhost:6001/oauth/authorize
+      access-token-uri: http://localhost:6001/oauth/token
+#    resource:
+#      id: user-client
+#      user-info-uri: user-info
+#    authorization:
+#      check-token-access: http://localhost:6001/oauth/check_token
+    resource:
+      jwt:
+        key-uri: http://localhost:6001/oauth/token_key
+        key-value: dev

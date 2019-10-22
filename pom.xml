@@ -25,6 +25,7 @@
         <module>security</module>
         <module>boot</module>
         <module>monitor</module>
+        <module>oauth2</module>
     </modules>
 
     <dependencies>

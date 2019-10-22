@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: client-order
+server:
+  port: 6100
+  servlet:
+    context-path: /client-order
+
+security:
+  oauth2:
+    client:
+      client-id: order-client
+      client-secret: order-secret-8888
+      user-authorization-uri: http://localhost:6001/oauth/authorize
+      access-token-uri: http://localhost:6001/oauth/token
+    resource:
+      jwt:
+        key-uri: http://localhost:6001/oauth/token_key
+        key-value: dev
