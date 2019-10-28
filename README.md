@@ -26,6 +26,18 @@
 [Spring Cloud Config 实现配置中心]()
 ：[对应源码](https://github.com/huzhicheng/spring-cloud-study/tree/master/config)
 
+[服务注册发现、配置中心集一体的 Spring Cloud Consul]()
+：[对应源码](https://github.com/huzhicheng/spring-cloud-study/tree/master/consul)
+
+[Spring Cloud 系列之 Spring Cloud Stream]()
+：[对应源码](https://github.com/huzhicheng/spring-cloud-study/tree/master/stream)
+
+[Spring Cloud Gateway 简单使用]()
+：[对应源码](https://github.com/huzhicheng/spring-cloud-study/tree/master/consul/gateway)
+
+[Spring Cloud OAuth2 实现用户认证和单点登录]()
+：[对应源码](https://github.com/huzhicheng/spring-cloud-study/tree/master/oauth2)
+
 如果觉得有用，请给个 star,还可以关注我的公众号。
 ## 微信公众号
 ![古时的风筝](http://hexo.moonkite.cn/code_small.png)
