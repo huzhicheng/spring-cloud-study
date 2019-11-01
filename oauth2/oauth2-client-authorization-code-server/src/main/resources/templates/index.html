@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>古时的风筝-OAuth2 Client</title>
+
+
+</head>
+<body>
+<div>
+    <a href="http://localhost:6001/oauth/authorize?client_id=code-client&response_type=code&redirect_uri=http://localhost:6102/client-authcode/login">登录</a>
+    <span th:text="'当前认证用户：' + ${username}"></span>
+    <span th:text="${accessToken}"></span>
+</div>
+</body>
+</html>

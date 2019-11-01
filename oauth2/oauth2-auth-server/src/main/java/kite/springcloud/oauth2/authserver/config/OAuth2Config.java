@@ -93,9 +93,7 @@ public class OAuth2Config extends AuthorizationServerConfigurerAdapter {
 
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-        JdbcClientDetailsServiceBuilder jcsb = clients.jdbc(dataSource);
-        jcsb.passwordEncoder(passwordEncoder);
-
+        clients.jdbc(dataSource);
 
 //        clients.inMemory()
 //                .withClient("order-client")

@@ -21,22 +21,11 @@ import javax.sql.DataSource;
 @RequestMapping(value = "hello")
 public class HelloController {
 
-    @Autowired
-    private DataSource dataSource;
-
-    @Autowired
-    private TokenStore redisTokenStore;
-
-    @GetMapping(value = "ok")
-    public String hello(){
-        DataSource d = dataSource;
-        return "ok";
-    }
-
 
     public static void main(String[] args){
         System.out.println(new BCryptPasswordEncoder().encode("user-secret-8888"));
         System.out.println(new BCryptPasswordEncoder().encode("client-secret-8888"));
+        System.out.println(new BCryptPasswordEncoder().encode("code-secret-8888"));
     }
 
 }
