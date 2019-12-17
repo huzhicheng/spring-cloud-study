@@ -38,6 +38,9 @@
 [Spring Cloud OAuth2 实现用户认证和单点登录](https://mp.weixin.qq.com/s/tXIycDTHw4nruuMP7xirQA)
 ：[对应源码](https://github.com/huzhicheng/spring-cloud-study/tree/master/oauth2)
 
+
+[Spring Cloud OAuth2 授权码模式，微信授权就是这个原理](https://mp.weixin.qq.com/s/r3G8Te9f9uXSbf8YaUV6MA)
+：[对应源码](https://github.com/huzhicheng/spring-cloud-study/tree/master/oauth2/oauth2-client-authorization-code-server)
 如果觉得有用，请给个 star,还可以关注我的公众号。
 ## 微信公众号
-![古时的风筝](http://hexo.moonkite.cn/code_small.png)
+![古时的风筝](http://hexo.moonkite.cn/gushifengzheng/%E5%85%AC%E4%BC%97%E5%8F%B7%E5%90%8D%E7%89%87-%E5%8F%A4%E6%97%B6%E7%9A%84%E9%A3%8E%E7%AD%9D-%E5%85%B6%E4%BB%96%E5%B9%B3%E5%8F%B0.png)
