@@ -1,7 +1,7 @@
 package kite.springcloud.gateway;
 
 
-import kite.springcloud.gateway.config.IpResolver;
+//import kite.springcloud.gateway.config.IpResolver;
 import org.joda.time.DateTime;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -56,10 +56,10 @@ public class Application {
                 .build();
     }
 
-    @Bean
-    IpResolver ipResolver(){
-        return new IpResolver();
-    }
+//    @Bean
+//    IpResolver ipResolver(){
+//        return new IpResolver();
+//    }
 
     @Bean
     RedisRateLimiter redisRateLimiter() {

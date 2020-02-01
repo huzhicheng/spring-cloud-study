@@ -12,7 +12,7 @@
     <groupId>kite.springcloud</groupId>
     <artifactId>start-example-use</artifactId>
 
-    <name>start-example-use</name>8
+    <name>start-example-use</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

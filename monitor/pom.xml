@@ -16,7 +16,7 @@
     <name>monitor</name>
     <description>监控</description>
     <modules>
-        <module>jmx</module>
+        <!--<module>jmx</module>-->
         <module>metrics-io</module>
         <module>actuator</module>
         <module>spring-boot-admin</module>

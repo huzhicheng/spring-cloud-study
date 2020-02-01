@@ -3,7 +3,7 @@ spring:
     active: dev
   rabbitmq:
     host: localhost
-    port: 32775
+    port: 5672
     username: guest
     password: guest
 
