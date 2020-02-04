@@ -1,13 +1,12 @@
-package kite.springcloud.oauth.client.order;
+package kite.springcloud.consul.oauth.client;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.security.oauth2.client.EnableOAuth2Sso;
 
 
 /**
  * 启动类
- * @author  古时的风筝
+ * @author  故事的风筝
  */
 @SpringBootApplication
 public class Application {

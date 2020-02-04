@@ -36,6 +36,22 @@ spring:
       port: 8500
       discovery:
         service-name: service-gateway
+  security:
+    oauth2:
+      client:
+        registration:
+          gateway:
+            client-id: gateway-client
+            client-secret: gateway-secret
+            authorization-grant-type: password
+            #authorization-grant-type: authorization_code
+            #redirect-uri-template: '{baseUrl}/login/oauth2/code/{registrationId}'
+            clientName: gateway
+        provider:
+          oauth-server:
+            user-authorization-uri: http://localhost:5010/oauth-service/oauth/authorize
+            access-token-uri: http://localhost:5010/oauth-service/oauth/token
+            jwt-key-uri: dev
 
 hystrix:
   command:

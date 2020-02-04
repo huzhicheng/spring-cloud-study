@@ -19,6 +19,8 @@
         <module>gateway</module>
         <module>consul-user</module>
         <module>consul-order</module>
+        <module>consul-oauth-server</module>
+        <module>consul-oauth-client</module>
     </modules>
 
     <dependencies>

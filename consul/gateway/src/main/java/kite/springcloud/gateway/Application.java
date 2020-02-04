@@ -2,11 +2,12 @@ package kite.springcloud.gateway;
 
 
 import kite.springcloud.gateway.config.IpResolver;
-import org.joda.time.DateTime;
+import kite.springcloud.gateway.config.filter.CustomerFilter;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.gateway.filter.factory.RequestRateLimiterGatewayFilterFactory;
+import org.springframework.cloud.gateway.filter.ratelimit.KeyResolver;
 import org.springframework.cloud.gateway.filter.ratelimit.RedisRateLimiter;
 import org.springframework.cloud.gateway.route.RouteLocator;
 import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
@@ -16,8 +17,6 @@ import org.springframework.security.core.userdetails.MapReactiveUserDetailsServi
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.server.SecurityWebFilterChain;
-
-import java.time.ZonedDateTime;
 
 /**
  * @author fengzheng
@@ -30,6 +29,9 @@ public class Application {
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
     }
+
+//    @Autowired
+//    private KeyResolver ipResolver;
 
     @Bean
     public RouteLocator kiteRouteLocator(RouteLocatorBuilder builder) {
@@ -51,13 +53,23 @@ public class Application {
                         .uri("lb://consul-user")
                 )
                 .route("limit_route", r -> r.path("/limiter/**")
-                        .filters(f -> f.stripPrefix(1).requestRateLimiter(c -> c.setRateLimiter(redisRateLimiter())/**.setKeyResolver(ipResolver())**/))
+                        .filters(f -> f.stripPrefix(1)
+                                .requestRateLimiter(
+                                        c -> c.setKeyResolver(ipResolver())
+                                                .setRateLimiter(redisRateLimiter())
+                                )
+                        )
                         .uri("lb://consul-user"))
+                .route("oauth_server", r -> r.path("/oauth-service/**")
+                        .filters(f -> f.filter(new CustomerFilter()))
+                        .uri("http://localhost:5010"))
+                .route("oauth_client", r -> r.path("/consul-oauth-client/**")
+                        .uri("http://localhost:5012"))
                 .build();
     }
 
     @Bean
-    IpResolver ipResolver(){
+    IpResolver ipResolver() {
         return new IpResolver();
     }
 
@@ -69,13 +81,17 @@ public class Application {
 
     @Bean
     SecurityWebFilterChain springWebFilterChain(ServerHttpSecurity http) throws Exception {
-        return http.httpBasic().and()
-                .csrf().disable()
-                .authorizeExchange()
-                .pathMatchers("/limiter/**").authenticated()
+        return http.csrf().disable().authorizeExchange()
                 .anyExchange().permitAll()
                 .and()
                 .build();
+//        return http.httpBasic().and()
+//                .csrf().disable()
+//                .authorizeExchange()
+//                .pathMatchers("/limiter/**").authenticated()
+//                .anyExchange().permitAll()
+//                .and()
+//                .build();
     }
 
     @Bean

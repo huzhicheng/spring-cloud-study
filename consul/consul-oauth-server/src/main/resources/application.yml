@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: consul-oauth-server
+  datasource:
+    url: jdbc:mysql://localhost:3306/spring_cloud?characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: P@ssw0rd
+    hikari:
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+      maximum-pool-size: 9
+#  redis:
+#    database: 2
+#    host: localhost
+#    port: 32768
+#    password: 1qaz@WSX
+#    jedis:
+#      pool:
+#        max-active: 8
+#        max-idle: 8
+#        min-idle: 0
+#    timeout: 100ms
+  cloud:
+    consul:
+      discovery:
+        service-name: consul-oauth-server
+      host: localhost
+      port: 8500
+
+server:
+  port: 5010
+  servlet:
+    context-path: /oauth-service
+
+management:
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
+  server:
+    port: 15015
+
+
