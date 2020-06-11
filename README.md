@@ -1,4 +1,4 @@
-## Spring Cloud 系列的学习脚手架
+_## Spring Cloud 系列的学习脚手架
 ![Java](https://img.shields.io/badge/JDK-1.8-green.svg)
 [![Spring Cloud](https://img.shields.io/badge/Spring%20Cloud-Greenwich.SR2-blue.svg)](https://spring.io/projects/spring-cloud)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-2.1.6.RELEASE-brightgreen.svg)](https://spring.io/projects/spring-boot)
@@ -6,7 +6,7 @@
 
 > Spring Cloud 和众多的其他框架一样，说到底只是一个工具。其实没有什么难度可言，只要花点时间实践一下，人人都可以使用。
 > 工具的使用都是一样的，所以使用手册也是大同小异。当然，使用姿势正确得当，系统也就更稳定，性能更好。
-我这个系列也是介绍 Spring Cloud 各模块的如何使用，如果你已经使用的很熟悉，也就没必要看了。
+我这个系列也是介绍 Spring Cloud 各模块的如何使用，如果你已经使用的很熟悉，也就没必要看了。_
 
 #### 本系列主要包括如下功能的介绍和简单脚手架
 
@@ -43,4 +43,4 @@
 ：[对应源码](https://github.com/huzhicheng/spring-cloud-study/tree/master/oauth2/oauth2-client-authorization-code-server)
 如果觉得有用，请给个 star,还可以关注我的公众号。
 ## 微信公众号
-![古时的风筝](http://hexo.moonkite.cn/qr-code-small.png)
+![古时的风筝](https://tva1.sinaimg.cn/large/007S8ZIlly1gfd6gx54haj314z0npafp.jpg)
