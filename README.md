@@ -1,4 +1,4 @@
-_## Spring Cloud 系列的学习脚手架
+## Spring Cloud 系列的学习脚手架
 ![Java](https://img.shields.io/badge/JDK-1.8-green.svg)
 [![Spring Cloud](https://img.shields.io/badge/Spring%20Cloud-Greenwich.SR2-blue.svg)](https://spring.io/projects/spring-cloud)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-2.1.6.RELEASE-brightgreen.svg)](https://spring.io/projects/spring-boot)
